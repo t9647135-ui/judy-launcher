@@ -548,9 +548,9 @@ class ProcessBuilder {
         // Forge Specific Arguments
         args = args.concat(this.modManifest.arguments.game)
 
-        // Filter null values
+        // Java 21 rejects this legacy Fabric flag even though the profile includes it.
         args = args.filter(arg => {
-            return arg != null
+            return arg != null && !(typeof arg === 'string' && arg.startsWith('--sun-misc-unsafe-memory-access'))
         })
 
         return args
