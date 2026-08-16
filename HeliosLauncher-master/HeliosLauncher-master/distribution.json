@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "discord": {
+    "clientId": "000000000000000000",
+    "smallImageText": "ByteNut",
+    "smallImageKey": "seal-circle"
+  },
+  "rss": "",
+  "servers": [
+    {
+      "id": "bytenut-paper-26-2",
+      "name": "ByteNut Paper 26.2",
+      "description": "ByteNut Paper sunucusu",
+      "icon": "",
+      "version": "1.0.0",
+      "address": "de2.bytenut.cc:6410",
+      "minecraftVersion": "26.2",
+      "discord": {
+        "shortId": "Paper",
+        "largeImageText": "ByteNut Paper Server",
+        "largeImageKey": "server-paper"
+      },
+      "mainServer": true,
+      "autoconnect": true,
+      "modules": []
+    }
+  ]
+}
