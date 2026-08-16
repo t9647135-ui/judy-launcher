@@ -1,11 +1,9 @@
 const { DistributionAPI } = require('helios-core/common')
-const path = require('path')
-const { pathToFileURL } = require('url')
 
 const ConfigManager = require('./configmanager')
 
-const distroPath = path.join(__dirname, '../../../distribution.json')
-exports.REMOTE_DISTRO_URL = pathToFileURL(distroPath).href
+// Use the public raw distribution file over HTTPS. The packaged app cannot load a file:// URL.
+exports.REMOTE_DISTRO_URL = 'https://raw.githubusercontent.com/t9647135-ui/judy-launcher/main/HeliosLauncher-master/HeliosLauncher-master/distribution.json'
 
 const api = new DistributionAPI(
     ConfigManager.getLauncherDirectory(),
